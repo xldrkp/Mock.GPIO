@@ -142,6 +142,8 @@ def input(channel):
     channel - either board pin number or BCM number depending on which mode is set.
     """
     logger.info("Reading from channel {}".format(channel))
+    # Always returns False to work with Pydantic
+    return False
 
 def wait_for_edge(channel,edge,bouncetime,timeout):
     """
